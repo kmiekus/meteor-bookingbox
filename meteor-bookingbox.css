@@ -1,0 +1,48 @@
+/* CSS declarations go here */
+
+body {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial,Helvetica,sans-serif;
+    display: block;
+    margin: 10px;
+    padding-top: 10px;
+}
+
+.image {
+    float: left;
+    margin: 10px;
+    width: 175px;
+}
+
+.label{
+    font-weight: bold;
+}
+
+.address {
+    float: left;
+    width: 250px;
+    display: block;
+}
+
+.address .label{
+    display: block;
+}
+
+.basic-info{
+    float: left;
+    margin-left: 30px;
+ }
+
+.basic-info .label{
+    font-weight: bold;
+}
+
+.booking-box{
+    display: block;
+}

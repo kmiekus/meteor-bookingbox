@@ -1,0 +1,45 @@
+<head>
+
+</head>
+
+<body>
+  {{> profile}}
+  {{> booking_box}}
+</body>
+
+<template name="profile">
+    <title>Book a table at {{restaurant.Name}}</title>
+
+    <img class="image" alt="{{restaurant.Name}}" src="http://www.toptable.co.uk/img/restimages/{{restaurant.Id}}.jpg">
+    <span class="name">{{restaurant.Name}}</span>
+
+    <div class="address">
+        <span class="label">Address:</span>
+        <span>{{restaurant.Address}}</span>
+    </div>
+
+    <div class="basic-info">
+        <div>
+            <span class="label">Area:</span>
+            <span>{{restaurant.Area}}</span>
+        </div>
+
+        <div>
+            <span class="label">Cuisine:</span>
+            <span>{{restaurant.Cuisine}}</span>
+        </div>
+
+        <div>
+            <span class="label">Price:</span>
+            <span>{{restaurant.PriceBand}}</span>
+        </div>
+    </div>
+</template>
+
+<template name="booking_box">
+   <div class="booking-box">
+       <span>Make a booking</span>
+       <input type="text">
+
+   </div>
+</template>
