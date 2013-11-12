@@ -39,7 +39,14 @@
 <template name="booking_box">
    <div class="booking-box">
        <span>Make a booking</span>
-       <input type="text">
+
+       <input type="text" class="datepicker" id="datepicker">
+
+       <select id='hour'>
+           {{#each hours}}
+           <option value='{{val}}'>{{text}}</option>
+           {{/each}}
+       </select>
 
    </div>
 </template>
