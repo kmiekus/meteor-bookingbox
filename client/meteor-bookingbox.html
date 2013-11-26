@@ -3,14 +3,17 @@
 </head>
 
 <body>
+
   {{> profile}}
-  {{> booking_box}}
+  {{> box}}
+
+
 </body>
 
 <template name="profile">
     <title>Book a table at {{restaurant.Name}}</title>
 
-    <img class="image" alt="{{restaurant.Name}}" src="http://www.toptable.co.uk/img/restimages/{{restaurant.Id}}.jpg">
+    <!--<img class="image" alt="{{restaurant.Name}}" src="http://www.toptable.co.uk/img/restimages/{{restaurant.Id}}.jpg">-->
     <span class="name">{{restaurant.Name}}</span>
 
     <div class="address">
@@ -36,6 +39,14 @@
     </div>
 </template>
 
+<template name="box">
+    {{#if showTimeSlots}}
+      {{> timeslots}}
+    {{else}}
+      {{> booking_box}}
+    {{/if}}
+</template>
+
 <template name="booking_box">
    <div class="booking-box">
        <span>Make a booking</span>
@@ -44,9 +55,24 @@
 
        <select id='hour'>
            {{#each hours}}
-           <option value='{{val}}'>{{text}}</option>
+           <option value='{{val}}' {{#if selected}} selected="selected" {{/if}} >{{text}}</option>
+           {{/each}}
+       </select>
+      
+       <select id='partySize'>
+           {{#each partysizes}}
+           <option value='{{val}}' {{#if selected}} selected="selected" {{/if}} >{{text}}</option>
            {{/each}}
        </select>
 
+       <input type="button" class="book_table" id="book" value="Book a table"></input>
+
    </div>
+</template>
+
+<template name="timeslots">
+    <span>Choose your time</span>
+    {{#each timeslots}}
+        <input type="button" class="timeslot" value="{{text}}" data-bookingtime="{{val}}"></input>
+    {{/each}}
 </template>
