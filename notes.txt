@@ -1,5 +1,8 @@
 error:
 UNABLE_TO_VERIFY_LEAF_SIGNATURE,
 
-issue:
+
+issues:
 Can't render headers after they are sent to the client
+ssl is not set up correctly on the api
+
