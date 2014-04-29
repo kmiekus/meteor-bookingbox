@@ -1,5 +1,5 @@
 error:
-UNABLE_TO_VERIFY_LEAF_SIGNATURE, - cannot reproduce anymore, might be fixed
+UNABLE_TO_VERIFY_LEAF_SIGNATURE
 
 
 issues:
